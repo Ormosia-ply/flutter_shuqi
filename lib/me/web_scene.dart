@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:share/share.dart';
 
 class WebScene extends StatefulWidget {
@@ -20,7 +20,8 @@ class _WebSceneState extends State<WebScene> {
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.dark,
         backgroundColor: Colors.white,
-        title: Text(widget.title ?? '', style: TextStyle(color: Colors.black87)),
+        title:
+            Text(widget.title ?? '', style: TextStyle(color: Colors.black87)),
         leading: IconButton(
           onPressed: () => Navigator.maybePop(context),
           icon: Icon(Icons.arrow_back_ios, color: Colors.black87),
@@ -34,10 +35,10 @@ class _WebSceneState extends State<WebScene> {
           )
         ],
       ),
-      // body: WebView(
-      //   javascriptMode: JavascriptMode.unrestricted,
-      //   initialUrl: widget.url,
-      // ),
+      body: WebviewScaffold(
+        // javascriptMode: JavaScriptMode.unrestricted,
+        url: widget.url,
+      ),
     );
   }
 }

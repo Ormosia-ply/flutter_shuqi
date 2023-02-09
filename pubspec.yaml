@@ -10,16 +10,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   carousel_slider:
   cached_network_image:
   shared_preferences:
-  webview_flutter:
+  flutter_webview_plugin:
   share:
   fluttertoast:
   battery:
   intl:
   device_info:
+  webview_flutter: ^4.0.2
 
 dev_dependencies:
   flutter_test:
