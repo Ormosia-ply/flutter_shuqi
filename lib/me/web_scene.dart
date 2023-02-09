@@ -34,10 +34,10 @@ class _WebSceneState extends State<WebScene> {
           )
         ],
       ),
-      body: WebView(
-        javascriptMode: JavascriptMode.unrestricted,
-        initialUrl: widget.url,
-      ),
+      // body: WebView(
+      //   javascriptMode: JavascriptMode.unrestricted,
+      //   initialUrl: widget.url,
+      // ),
     );
   }
 }
